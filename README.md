@@ -1,1 +1,1 @@
-# kanbas-react-webapp
+# kanbas-react-web-app
