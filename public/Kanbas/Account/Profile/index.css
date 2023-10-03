@@ -1,0 +1,92 @@
+.wd-profile-navigation {
+    list-style: none;
+    background-color: white;
+    padding: 0px;
+    width: 195px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.wd-profile-navigation li {
+    padding-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: left;
+}
+
+.wd-profile-navigation a {
+    color: #C51E3A;
+    text-decoration: none;
+    margin-left: 8px;
+    text-overflow: ellipsis;
+}
+
+.wd-profile-navigation li.wd-active {
+    background-color: white;
+    border-left: 2px solid black;
+}
+
+.wd-profile-navigation li.wd-active a {
+    color: black;
+    /* margin-left: 8px; */
+}
+
+
+.wd-profile-icon {
+    font-size: 50;
+    color: white;
+    margin: .2em;
+}
+
+.wd-profile-icon:before {
+    background-color: white;
+    border-radius: 50%;
+    width: 1em;
+    height: 1em;
+    border: 1.3px solid gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.wd-profile-page {
+    color: #333333;
+    text-decoration: none;
+}
+
+.wd-profile-page a {
+    text-decoration: none;
+    color: #C51E3A;
+}
+
+.wd-profile-ext-link {
+    color: #333333;
+
+}
+
+.wd-custom-btn {
+    color: black;
+    /* Set text color to black */
+    background-color: gray;
+    /* Set background color to gray */
+    padding-top: .25rem !;
+    padding-bottom: .25rem;
+    padding-left: .5rem;
+    padding-right: .5rem;
+    font-size: .75rem;
+}
+
+.wd-profile-header {
+    color: #333333;
+    padding-left: 1.3em;
+    padding-top: 1.2em;
+}
+
+.wd-profile-header i {
+    color: #C51E3A;
+    font-size: .8em;
+    padding-right: 20px;
+}

@@ -1,0 +1,58 @@
+.wd-kanbas-navigation {
+    background-color: black;
+    list-style: none;
+    padding: 0px;
+    width: 80px;
+    margin: 0px;
+}
+
+.wd-kanbas-navigation li {
+    font-size: .8em;
+    padding: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+
+}
+
+.wd-kanbas-navigation li a {
+    color: white;
+    text-decoration: none;
+    /* padding: 10px;
+    display: block; */
+
+}
+
+.wd-kanbas-navigation li.wd-active {
+    background-color: azure;
+}
+
+.wd-kanbas-navigation li.wd-active a {
+    color: #C51E3A;
+}
+
+
+.wd-kanbas-navigation li a i {
+    color: #C51E3A;
+    padding-top: 5px;
+    font-size: 1.5em;
+    padding-bottom: 5px;
+    border-radius: 50%;
+    width: 1em;
+    height: 1em;
+}
+
+
+.fa-user:before {
+    background-color: darkgray;
+    font-size: 1.5em;
+    color: grey;
+    border-radius: 50%;
+    width: 1em;
+    height: 1em;
+    border: 1.3px solid white;
+}
+
+.wd-break {
+    padding-bottom: 10px;
+
+}

@@ -1,0 +1,12 @@
+ /* Add rounded border-radius styles */
+ .btn-rounded {
+     border-radius: 105px;
+     /* You can adjust this value to control the curve's radius */
+ }
+
+ .breadcrumb-item {
+    white-space: nowrap;       /* Prevent text from wrapping */
+    overflow: hidden;          /* Hide overflowing text */
+    text-overflow: ellipsis;  /* Show ellipsis for long text */
+    max-width: 150px;         /* Adjust the maximum width as needed */
+}
