@@ -20,7 +20,7 @@
 <body>
     <div class="wd-flex-row-container ">
 
-        <div class="wd-bg-color-black">
+        <div class="d-none d-md-block wd-bg-color-black">
             <ul class="wd-kanbas-navigation">
                 <li>
                     <a href="/Kanbas/Account/Profile/screen.html">
@@ -56,10 +56,9 @@
                         Help</a></li>
             </ul>
         </div>
-
-
+       
         <div class="wd-course-home-main">
-            <div class="row">
+            <div class="d-none d-lg-block row">
                 <div class="col-8">
                     <nav style="--bs-breadcrumb-divider:  '>';" aria-label="breadcrumb">
                         <ol class="breadcrumb wd-course-header" style="padding-top: 10px; padding-left: 10px; ">
@@ -79,9 +78,32 @@
                         Student Veiw</button>
                 </div>
             </div>
+            
+<hr style="color: #333333;">
+
+
+            <div class="d-none d-md-block d-sm-block d-lg-none row p-3 float-center" style="background-color: black; color: #E5E2E2; align-items: center;">
+                <div >
+                      <button onclick="window.location.href='mobileMenu.html'"><i class="fa fa-bars" style="padding-right: 5px; font-size: 25px;"
+                                aria-hidden="true"></i></button>
+                    <i class="fa fa-eye-slash float-end " aria-hidden="true"></i>
+                    <nav style="--bs-breadcrumb-divider:  '>';" aria-label="breadcrumb">
+                        <ol class="breadcrumb wd-course-header" style="padding-top: 10px; padding-left: 10px; ">
+                          
+                            <li class="breadcrumb-item">CS5610 Web Programming<br>Modules</li>
+                          
+                        </ol>
+                    </nav>
+                
+                </div>
+                       
+   
+            </div>
+
+
             <hr>
             <div class="wd-flex-row-container">
-                <div class="wd-course-nav-home mx-1">
+                <div class="d-none d-lg-block wd-course-nav-home mx-1">
                     <ul class="wd-course-navigation">
                         <li class="wd-active"><a href="/Kanbas/Courses/Home/screen.html">Home</a></li>
                         <li><a href="/Kanbas/Courses/Modules/index.html">Modules</a></li>
@@ -456,7 +478,7 @@
                         </ul>
                     </div>
 
-                    <div class="wd-course-home-last-col m-2">
+                    <div class="d-none d-lg-block wd-course-home-last-col m-2">
                         <h5 style="color: #333333;">Course Status</h5>
                         <button type="button" class="btn btn-primary m-1 p-1"
                             style="color:  #333333;background-color:  azure; border:  #333333 solid 1px; ">
