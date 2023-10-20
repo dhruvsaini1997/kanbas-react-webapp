@@ -22,5 +22,18 @@
 .card {
     width: 300px;
 }
+.card .wd-title {
+    color: rgb(67, 177, 221);
+  }
 
+  
+  .card b {
+    color: grey;
+    font-size: 15px;
+}
+.card p {
+    color: grey;
+    font-size: 12px;
+}
+ 
  
