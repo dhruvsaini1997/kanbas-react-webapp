@@ -1,0 +1,9 @@
+.fa-check-circle {
+    color: white;
+    background-color: green;
+    padding: 1px; /* Add padding to create space around the icon */
+    border-radius: 15px; /* Optional, for a circular background */
+    width: 15px; /* Set the width and height according to your preferences */
+    height: 15px;
+  }
+  

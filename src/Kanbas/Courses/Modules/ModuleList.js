@@ -1,8 +1,10 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import db from "../../Database";
-import {AiOutlineCheckCircle} from "react-icons/ai";
-import {FaEllipsisVertical} from "react-icons/fa6"
+import {AiOutlineCheckCircle, AiOutlinePlus} from "react-icons/ai";
+import {FaEllipsisVertical} from "react-icons/fa6";
+import "./index.css";
+
 function ModuleList() {
   const { courseId } = useParams();
   const modules = db.modules;
@@ -35,7 +37,9 @@ function ModuleList() {
 
                     <ul class="list-group mb-5">
                         <li class="list-group-item list-group-item-secondary d-flex justify-content-between align-items-center"> Readings
-                            <span><AiOutlineCheckCircle className="fa-check-circle"/>
+                            <span>
+      <AiOutlineCheckCircle className="fa-check-circle" />
+      <AiOutlinePlus/>
                                 <FaEllipsisVertical />
                             </span>
                         </li>
@@ -43,6 +47,7 @@ function ModuleList() {
                     <ul class="list-group mb-5">
                         <li class="list-group-item list-group-item-secondary d-flex justify-content-between align-items-center"> Required Textbooks
                             <span><AiOutlineCheckCircle className="fa-check-circle"/>
+                            <AiOutlinePlus/>
                                 <FaEllipsisVertical />
                             </span>
                         </li>
@@ -55,6 +60,7 @@ function ModuleList() {
                             <ul class="list-group mb-5">
                                 <li class="list-group-item list-group-item-secondary d-flex justify-content-between align-items-center">Week {module.week} - {module.name}
                                     <span><AiOutlineCheckCircle className="fa-check-circle"/>
+                                    <AiOutlinePlus/>
                                         <FaEllipsisVertical />
                                     </span>
                                 </li>
