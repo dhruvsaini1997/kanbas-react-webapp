@@ -7,3 +7,10 @@
     height: 15px;
   }
   
+  .newModule {
+    color: black;
+    background-color: white;
+    border: 1px solid #ccc; /* Add the border style here */
+    border-radius: 10px; /* Add border radius if desired */
+    padding: 20px; /* Add padding if desired */
+}
