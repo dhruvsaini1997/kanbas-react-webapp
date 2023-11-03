@@ -4,10 +4,19 @@ import db from "../../Database";
 import {AiOutlineCheckCircle, AiOutlinePlus} from "react-icons/ai";
 import {FaEllipsisVertical} from "react-icons/fa6";
 import "./index.css";
+import { useSelector, useDispatch } from "react-redux";
+import {
+  addModule,
+  deleteModule,
+  updateModule,
+  setModule,
+} from "./moduleReducer";
 
 function ModuleList() {
   const { courseId } = useParams();
-  const modules = db.modules;
+  const modules = useSelector((state) => state.modulesReducer.modules);
+  const module = useSelector((state) => state.modulesReducer.module);
+  const dispatch = useDispatch();
   return (
     <div>
         <div class="wd-flex-row-container">
@@ -32,9 +41,31 @@ function ModuleList() {
                         <FaEllipsisVertical />
                         </button>
                     </div>
-                    <br/>
+                    <br/>  <br/>  <br/>
                     <hr />
+                    <div className="newModule">
+                    <li className="list-group-item">
+                                <input value={module.name}
+                                onChange={(e)=> dispatch(setModule({ ...module, name: e.target.value }))
+                                }
+                                />
+                                <br/>
+                                <textarea value={module.description}
+                                onChange={(e) => dispatch(setModule({ ...module, description: e.target.value }))                            
+                                }
+                                />
+                                <br/>
+                                <button type="button" class="btn btn-danger" 
+                                          onClick={() => dispatch(addModule({ ...module, course: courseId }))}>
+                                          Add</button>
+                                <button 
+                                type="button" class="btn btn-light"
+                                onClick={() => dispatch(updateModule(module))}>
+                                Update
+                                </button>
 
+                            </li></div>
+                            <br/>
                     <ul class="list-group mb-5">
                         <li class="list-group-item list-group-item-secondary d-flex justify-content-between align-items-center"> Readings
                             <span>
@@ -59,6 +90,18 @@ function ModuleList() {
                         <div>
                             <ul class="list-group mb-5">
                                 <li class="list-group-item list-group-item-secondary d-flex justify-content-between align-items-center">Week {module.week} - {module.name}
+                                <button
+                                    type="button" class="btn btn-light"
+                                    onClick={() => dispatch(setModule(module))}>
+                                    Edit
+                                    </button>
+
+                                    <button
+                                     type="button" class="btn btn-danger"
+                                     onClick={() => dispatch(deleteModule(module._id))}>
+                                     Delete
+                                    </button>
+
                                     <span><AiOutlineCheckCircle className="fa-check-circle"/>
                                     <AiOutlinePlus/>
                                         <FaEllipsisVertical />

@@ -4,12 +4,40 @@ import db from "../../Database";
 import "./index.css"
 import {FaEllipsisVertical} from "react-icons/fa6"
 import {AiOutlineCheckCircle} from "react-icons/ai";
+import { useSelector, useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
+
+import {
+  addAssignment,
+  deleteAssignment,
+  updateAssignment,
+  selectAssignment,
+} from "./assignmentReducer";
 
 function Assignments() {
+  const assignments = useSelector((state) => state.assignmentsReducer.assignments);
+
+  const dispatch = useDispatch();
+
   const { courseId } = useParams();
-  const assignments = db.assignments;
+
+  const navigate = useNavigate();
+
+  const handleButtonClick = () => {
+    navigate("CreateAssignment");
+  };
+
+  const handleDelete = (assignmentId) => {
+    const confirmation = window.confirm("Are you sure you want to remove this assignment?");
+    if (confirmation) {
+        dispatch(deleteAssignment(assignmentId)); // Assuming you have a deleteAssignment action
+    }
+};
+
   const courseAssignments = assignments.filter(
     (assignment) => assignment.course === courseId);
+
+
   return (
     <div>
 
@@ -26,7 +54,7 @@ function Assignments() {
       
                   <div class="d-flex">
                       <button type="button" class="btn btn-light">Group</button>
-                      <button type="button" class="btn btn-danger">Assignment</button>
+                      <button type="button" class="btn btn-danger"  onClick={handleButtonClick}>Assignment</button>
                       <button type="button" class="btn btn-light">
                         <FaEllipsisVertical />
                       </button>
@@ -45,6 +73,7 @@ function Assignments() {
               </ul>
         </div>
         {courseAssignments.map((assignment) => (
+          <div>
           <Link
           key={assignment._id}
           to={`/Kanbas/Courses/${courseId}/Assignments/${assignment._id}`}
@@ -66,6 +95,9 @@ function Assignments() {
                   
 
         </Link>
+          <button className="btn btn-danger my-2 mx-4 float-end" style={{ fontSize: "12px" }} onClick={() => dispatch(deleteAssignment(assignment._id))}>Delete</button> 
+        </div>
+        
       ))}
       </div>
 

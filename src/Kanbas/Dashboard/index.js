@@ -4,11 +4,42 @@ import "./index.css";
 import { FaRegEdit } from 'react-icons/fa';
 import cardImg from "../../Images/webdev.png";
 
-function Dashboard() {
-  const courses = db.courses;
+function Dashboard(
+  { courses, course, setCourse, addNewCourse,
+    deleteCourse, updateCourse }
+  
+) {
+  // const courses = db.courses;
   return (
     <div className="wd-dashboard">
-      <h1>Dashboard</h1>
+      <div className="newCourse align-end">
+          <h5>Course</h5>
+          <input value={course.name} className="form-control my-1" 
+                       onChange={(e) => setCourse({ ...course, name: e.target.value }) } />
+
+          <input value={course.number} className="form-control  my-1" 
+                       onChange={(e) => setCourse({ ...course, number: e.target.value }) } />
+
+          <input value={course.startDate} className="form-control  my-1"  type="date" 
+                       onChange={(e) => setCourse({ ...course, startDate: e.target.value }) }/>
+
+          <input value={course.endDate} className="form-control  my-1"  type="date" 
+                       onChange={(e) => setCourse({ ...course, endDate: e.target.value }) } />
+
+       <br></br>
+          <button 
+          type="button" class="btn btn-danger mx-2"
+          onClick={addNewCourse} >
+            Add
+          </button>
+
+          <button 
+          type="button" class="btn btn-light"
+          onClick={updateCourse} >
+            Update
+          </button>
+          </div>
+          <h1>Dashboard</h1>
       <hr />
       <div className="container">
         <h2>Published Course ({courses.length})</h2>
@@ -22,7 +53,27 @@ function Dashboard() {
                   <div class="card-body">
                     <h5 class="card-title wd-title">{course._id}</h5>
                   
-                      <b>{course.name} {course.number}</b>
+                      {/* <b>{course.name} {course.number}</b> */}
+                      <Link key={course._id} to={`/Kanbas/Courses/${course._id}`} className="list-group-item">
+                          <b>{course.name} {course.number}</b>
+                          <br/>
+                          <button
+                          type="button" class="btn btn-light "
+                          onClick={(event) => {
+                            event.preventDefault();
+                            setCourse(course);
+                          }}>
+                          Edit
+                        </button>
+                          <button
+                          type="button" class="btn btn-danger float-end px-1"
+                          onClick={(event) => {
+                            event.preventDefault();
+                            deleteCourse(course._id);
+                          }}>
+                          Delete
+                        </button>  
+                        </Link>
                    
                     <p>{course.startDate} TO {course.endDate}</p>
 
