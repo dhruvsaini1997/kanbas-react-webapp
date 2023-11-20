@@ -1,4 +1,4 @@
-import logo from "./logo.svg";
+
 import './App.css';
 import Kanbas from "./Kanbas";
 import HelloWorld from "./Labs/a3/HelloWorld";
@@ -7,6 +7,7 @@ import { HashRouter, Link, Navigate, Route, Routes } from "react-router-dom";
 import Assignment3 from "./Labs/a3";
 import { Provider } from "react-redux";
 import store from "./Labs/store";
+import Assignment5 from "./Labs/a5";
 
 function App() {
   const screen = "Labs";
@@ -20,6 +21,7 @@ function App() {
           <Route path="/Labs/a3/*" element={<Assignment3 />} />
           <Route path="/Kanbas/*" element={<Kanbas />} />
           <Route path="/Labs/a4/*" element={<Assignment4/>}/>
+          <Route path="/Labs/a5/*" element={<Assignment5/>}/>
           {/* <Route path="/Lectures" element={<StateManagement />} /> */}
         </Routes>
         {/* {screen === "Hello" && <HelloWorld />}

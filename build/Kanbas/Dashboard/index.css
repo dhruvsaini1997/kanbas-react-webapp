@@ -1,0 +1,22 @@
+.wd-dashboard-header{
+    color: #333333;
+    padding-left: 1.3em;
+    padding-top: 1.2em;
+}
+
+.cardsclass{
+    color: darkblue;
+    width: 250px;
+    max-width: 270px;
+    margin: 15px; /
+}
+
+.cardsclass a{
+    text-decoration: none;
+}
+.cardsclass p{
+    color: gray;
+}
+.cardsclass i{
+    color: gray;
+}

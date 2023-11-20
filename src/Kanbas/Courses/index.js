@@ -7,12 +7,27 @@ import Home from "./Home";
 import Assignments from "./Assignments";
 import AssignmentEditor from "./Assignments/AssignmentEditor";
 import Grades from "./Grades";
-import {RxHamburgerMenu} from "react-icons/rx"
+import {RxHamburgerMenu} from "react-icons/rx";
+import { useState, useEffect } from "react";
+import axios from "axios";
 function Courses({courses}){
     const {courseId} = useParams();
     const {pathname} = useLocation();
     const [qwe, kanbas, coursesx, id, screen] = pathname.split("/");
-    const course = courses.find((course) => course._id === courseId);
+    // const course = courses.find((course) => course._id === courseId);
+    const URL = "https://kanbas-node-server-app-ds-527a75a57960.herokuapp.com/api/courses";
+  const [course, setCourse] = useState({});
+  const findCourseById = async (courseId) => {
+    const response = await axios.get(
+      `${URL}/${courseId}`
+    );
+    setCourse(response.data);
+  };
+  useEffect(() => {
+    findCourseById(courseId);
+  }, [courseId]);
+
+
     return (
         <div>
             <div className="breadcrumb d-sm-none d-md-none d-lg-block">

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Example</title>
+</head>
+<body>
+    <div id="main" class="container">
+        <h1 id="welcome-message">Loading...</h1>
+    </div>
+
+    <script type="module">
+        import getWelcomeMessage from './Home.js';
+
+        const welcomeMessage = getWelcomeMessage();
+        const welcomeMessageElement = document.getElementById("welcome-message");
+        welcomeMessageElement.innerHTML = welcomeMessage;
+    </script>
+</body>
+</html>
