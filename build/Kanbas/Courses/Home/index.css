@@ -1,0 +1,53 @@
+.wd-course-home-main{
+    /* color: #C51E3A; */
+    width: 100%;
+}
+
+
+.wd-module-end-i:before {
+    content: "\f142";
+    /* Unicode character for the desired Font Awesome icon */
+    color: green;
+    font-size: large;
+}
+
+
+.button-container {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    align-items: end;
+}
+
+.button-container button {
+    padding: 10px 10px;
+    /* Adjust padding as needed for your desired button size */
+}
+
+.uniform-button {
+    color: #333333;
+    background-color: azure;
+    border: #E5E2E2 solid 1px;
+    padding: 10px 20px;
+    /* Adjust padding as needed for your desired button size */
+}
+
+
+
+/* Hide the div when the screen width is below 900px */
+@media (max-width: 900px) {
+    .wd-course-home-last-col {
+        display: none;
+    }
+}
+
+/* Hide the div when the screen width is below 900px */
+@media (max-width: 300px) {
+    .wd-kanbas-navigation {
+        display: none;
+    }
+
+    .wd-course-nav-home {
+        display: none;
+    }
+}

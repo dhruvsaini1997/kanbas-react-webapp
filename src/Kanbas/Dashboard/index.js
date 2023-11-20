@@ -7,7 +7,6 @@ import cardImg from "../../Images/webdev.png";
 function Dashboard(
   { courses, course, setCourse, addNewCourse,
     deleteCourse, updateCourse }
-  
 ) {
   // const courses = db.courses;
   return (
@@ -35,7 +34,7 @@ function Dashboard(
 
           <button 
           type="button" class="btn btn-light"
-          onClick={updateCourse} >
+          onClick={()=>updateCourse(course)} >
             Update
           </button>
           </div>
@@ -69,7 +68,7 @@ function Dashboard(
                           type="button" class="btn btn-danger float-end px-1"
                           onClick={(event) => {
                             event.preventDefault();
-                            deleteCourse(course._id);
+                            deleteCourse(course);
                           }}>
                           Delete
                         </button>  

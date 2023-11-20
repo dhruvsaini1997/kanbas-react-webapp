@@ -1,78 +1,160 @@
-<body>
-<table width="100%" border="1">
-    <tr>
-        <td valign="top">
-            <ul>
-                <li><a style="text-decoration: none; color: red;" href="/Kanbas/Account/Profile/screen.html">Account</a></li>
-                <li><a href="#">Dashboard</a></li>
-                <li><a href="/kanbas/Courses/Home/screen.html">Courses</a></li>
-                <li><a href="#">Caledar</a></li>
-                <li><a href="#">Indox</a></li>
-                <li><a href="#">History</a></li>
-                <li><a href="#">Studio</a></li>
-                <li><a href="#">Commons</a></li>
-                <li><a href="#">Help</a></li> 
-            </ul>
-        </td>
-        <td valign="top">
-            <ul>
-                <li><a style="text-decoration: none; color: red;" href="/Kanbas/Account/Profile/screen.html">View Profile</a></li>
-                <li><a href="#">Settings</a></li>
-                <li><a href="#">Notification</a></li>
-                <li><a href="#">The Hub</a></li>
-                <li><a href="#">ePortfolios</a></li>
-                <li><a href="#">Shared Content</a></li>
-            </ul>
-        </td>
-        <td>
-<h2 style="display: inline-block; margin-right: 10px;">Dhruv Saini</h2>
-<form>
-    <label>First Name*</label>
-    <input value="Dhruv"/><br/><br/>
-    <label>Last Name*</label>
-    <input value="Saini"/><br/><br/>
-    <label>Title</label>
-    <input placeholder=""/><br/><br/>
-    <label for="text-fields-pronoun">Pronouns</label>
-            <select>
-                <option selected value="">He/Him</option>
-                <option value="">She/Her</option>
-                <option value="">Others</option>
-            </select><br/><br/>
-</form>
+<link rel="stylesheet" href="../../../lib/font-awesome/css/font-awesome.css" />
+<link rel="stylesheet" href="../../../styles.css" />
+<link rel="stylesheet" href="../../KanbasNavigation/index.css" />
+<link rel="stylesheet" href="index.css" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
-<img src="../../../Images/profileImg1.jpeg" width="200" height="200" alt="Profile Image"><br>
 
-<button for="fileInput">Upload Photo</button>
-<input type="file" id="fileInput" style="display: none;">
 
-<h3>Contact</h3>
-<h5>No registered Service, you can add some on the <a href="#">settings</a> page.</h5>
-<h3>Biography</h3>
-<textarea cols="30"
-rows="5">Student, Computer Science, Coder, Problem Solving</textarea>
-<h3>Links</h3>
-<ul>
-    <li><a href="www.dhruvsaini.us"> External website Link.</a></li>
-</ul>
-<table>
-    <th><tr>
-        <td>Title</td>
-        <td>URLS</td>
-    </tr></th>
-    <tr><td><input value="website portfolio"></td>
-    <td><input value="www.dhruvsaini.us"/></td></tr>
-</table>
-<button>
-   Add New Link
-  </button><br/><br/>
-<button style="display: inline-block;">
-    <a href="./screen.html" style="text-decoration: none; color: black;">Save Changes</a>
-  </button>
-  <button style="display: inline-block;">
-    <a href="./screen.html" style="text-decoration: none; color: black;"> Cancel Changes</a>
-  </button>  </td>
-</tr>
+<div class="wd-flex-row-container ">
+    <div class="wd-bg-color-black">
+        <ul class="wd-kanbas-navigation">
+            <li>
+                <a href="/Kanbas/Account/Profile/screen.html">
+                    <img src="../../../Images/monoNu.svg">
+            </li>
+            <li class="wd-active"><a href="/Kanbas/Account/Profile/screen.html">
+                    <i class="fa fa-user wd-profile-icon" aria-hidden="true"></i><br class="wd-break" />
+                    Account</a></li>
+            <li><a href="/Kanbas/Dashboard/screen.html">
+                    <i class="fa fa-tachometer" aria-hidden="true"></i><br />
+                    Dashboard</a></li>
+            <li><a href="/kanbas/Courses/Home/screen.html">
+                    <i class="fa fa-book" aria-hidden="true"></i><br />
+                    Courses</a></li>
+            <li><a href="#">
+                    <i class="fa fa-calendar" aria-hidden="true"></i><br />
+                    Caledar
+                </a></li>
+            <li><a href="#">
+                    <i class="fa fa-inbox" aria-hidden="true"></i><br />
+                    Indox</a></li>
+            <li><a href="#">
+                    <i class="fa fa-clock-o" aria-hidden="true"></i><br />
+                    History</a></li>
+            <li><a href="#">
+                    <i class="fa fa-desktop" aria-hidden="true"></i><br />
+                    Studio</a></li>
+            <li><a href="#">
+                    <i class="fa fa-sign-out" aria-hidden="true"></i><br />
+                    Commons</a></li>
+            <li><a href="#">
+                    <i class="fa fa-question-circle-o" aria-hidden="true"></i><br />
+                    Help</a></li>
+        </ul>
+    </div>
+    <div style="width: 100%">
+        <div class="wd-profile-header">
+            <h2>
+                <i class="fa fa-bars" aria-hidden="true"></i>
+                Dhruv Saini's Profile
+            </h2>
+            <hr>
+        </div>
+        <div class="wd-flex-row-container ">
+            <div>
+                <ul class="wd-profile-navigation">
+                    <li><a href="#">Notification</a></li>
+                    <li class="wd-active"><a href="screen.html">Profile</a></li>
+                    <li><a href="#">Files</a></li>
+                    <li><a href="#">Settings</a></li>
+                    <li><a href="#">ePortfolios</a></li>
+                    <li><a href="#">Shared Content</a></li>
+                    <li><a href="#">The Hub</a></li>
+                    <li><a href="#">Quickly Course Tools</a></li>
+                    <li><a href="#">Global Announcements</a></li>
+                </ul>
 
-</table>
-</body>
+            </div>
+
+
+            <div class="wd-profile-page wd-flex-row-container">
+                <div class="wd-grid-col-left-sidebar">
+                    <i class="fa fa-user wd-profile-icon" aria-hidden="true"></i><br />
+
+                    <form>
+
+                        <label for="name" class="form-label">Name:*</label>
+                        <input type="text" class="form-control" id="name" placeholder="Dhruv Saini">
+
+                        <label for="text-fields-pronoun">Pronouns</label>
+                        <select class="form-select" aria-label="Default select example">
+                            <option selected>He/Him</option>
+                            <option value="1">She/Her</option>
+                            <option value="2">Others</option>
+                        </select>
+
+                        <label for="title" class="form-label">Title:</label><br />
+                        <input type="text" class="form-control" id="title">
+
+                        <h3>Contact</h3>
+                        <p>No registered Service, you can add some on the <a href="#">settings</a> page.</p>
+                        <div class="mb-3">
+                            <label for="Biography" class="form-label">Biography</label>
+                            <textarea class="form-control" id="Biography"
+                                rows="5">Student, Computer Science, Coder, Problem Solving.</textarea>
+
+                        </div>
+
+                        <h3>Links</h3>
+
+                        <div class="container text-center">
+                            <div class="row">
+                                <div class="col-4">
+                                    Title
+                                </div>
+                                <div class="col-1">
+                                </div>
+                                <div class="col-4">
+                                    URL
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-4">
+                                    <input type="text" class="form-control" id="name" value="Portfolio">
+                                </div>
+                                <div class="col-1">
+                                    <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                                </div>
+                                <div class="col-4">
+                                    <input type="text" class="form-control" id="name" value="www.dhruvsaini.us">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <button type="button" class="btn btn-primary"
+                                style="--bs-btn-padding-y: .15rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem; background-color: #F9F8F8 ;color:#333333; border:#333333 solid .1px; margin: 10px;">
+                                Add New Link
+                            </button>
+                        </div>
+                        <hr>
+                        <div class="wd-submit-form text-end">
+                            <button type="submit" class="btn btn-primary wd-profile-save-btn"
+                                style="background-color:  #F9F8F8;color: #333333;border: #333333 solid 01px;">
+
+                                <a href="./screen.html" style="color: #333333;"> Cancel</a>
+                            </button>
+                            <button type="submit" class="btn btn-primary wd-profile-save-btn"
+                                style="background-color: #c51e3a;border: #c51e3a;">
+                                <a href="./screen.html" style="color: white;"> Save Changes</a>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="wd-grid-col-right-sidebar">
+                    <button type="button" class="btn btn-primary"
+                        style="--bs-btn-padding-y: .15rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem; background-color: #F9F8F8 ;color:#333333; border:#333333 solid .1px; margin: 10px;">
+                        <a href="screen.html" style="text-decoration: none; color: black;">
+                            <i class="fa fa-pencil" aria-hidden="true"></i>
+                            Cancel Editing</a>
+                    </button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
