@@ -273,7 +273,7 @@ function WorkingWithArrays() {
             </button>
          
             <button
-    onClick={() => deleteTodo(todo)}
+    onClick={() => removeTodo(todo)}
     className="btn btn-danger float-end ms-2">
     Delete
   </button>
