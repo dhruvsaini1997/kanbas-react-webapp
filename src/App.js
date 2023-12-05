@@ -23,7 +23,7 @@ function App() {
           <Route path="/Kanbas/*" element={<Kanbas />} />
           <Route path="/Labs/a4/*" element={<Assignment4/>}/>
           <Route path="/Labs/a5/*" element={<Assignment5/>}/>
-          <Route path="/project/*" element={<Project />} />
+          <Route path="/project/*" element={<Project/>} />
           {/* <Route path="/Lectures" element={<StateManagement />} /> */}
         </Routes>
         {/* {screen === "Hello" && <HelloWorld />}
