@@ -4,7 +4,7 @@ const request = axios.create({
 });
 
 export const BASE_API = process.env.REACT_APP_BASE_API_URL;
-export const USERS_API = `${BASE_API}/api/users`;
+export const USERS_API = `https://kanbas-node-server-app-ds-527a75a57960.herokuapp.com/api/users`;
 export const signin = async (credentials) => {
   console.log("We called "+ USERS_API);
   const response = await request.post(`${USERS_API}/signin`, credentials);
